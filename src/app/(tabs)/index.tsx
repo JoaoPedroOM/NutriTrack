@@ -9,56 +9,80 @@ import { SectionTabs } from "../../components/SectionTabs";
 import { TodayHeader } from "../../components/TodayHeader";
 
 export default function TodayScreen() {
-  const [activeTab, setActiveTab] = useState("Today");
+  const [activeTab, setActiveTab] = useState<(typeof tabs)[number]>("Today");
 
   return (
     <SafeAreaView className="flex-1 bg-slate-50">
       <ScrollView contentContainerStyle={{ paddingBottom: 32 }}>
 
-        <View className="bg-green-100 rounded-b-3xl pb-6">
-          <TodayHeader />
-          <NutritionSummary
-            caloriesLeft={dailySummary.caloriesLeft}
-            dailyGoal={dailySummary.dailyGoal}
-            progress={dailySummary.progress}
-            macros={dailySummary.macros}
-          />
-        </View>
-
-        <SectionTabs
-          tabs={tabs}
-          activeTab={activeTab}
-          onSelect={setActiveTab}
-        />
-        <View className="mx-4 mt-5">
-          <Text className="font-sans-bold text-slate-950 text-base mb-3">
-            MEALS
-          </Text>
-
-          {meals.map((meal) => (
-            <MealCard
-              key={meal.id}
-              title={meal.title}
-              subtitle={meal.subtitle}
-              kcal={meal.kcal}
-            />
-          ))}
-          <TouchableOpacity className="bg-white rounded-2xl py-5 mb-2.5 items-center justify-center shadow-sm shadow-slate-200">
-            <View className="w-11 h-11 rounded-full bg-emerald-600 items-center justify-center mb-2">
-              <Feather name="plus" size={22} color="#ffffff" />
+        {activeTab === "Today" && (
+          <>
+            <View className="bg-green-100 rounded-b-3xl pb-6">
+              <TodayHeader />
+              <NutritionSummary
+                caloriesLeft={dailySummary.caloriesLeft}
+                dailyGoal={dailySummary.dailyGoal}
+                progress={dailySummary.progress}
+                macros={dailySummary.macros}
+              />
             </View>
-            <Text className="font-sans-semibold text-slate-700 text-sm">
-              Add Meal
-            </Text>
-          </TouchableOpacity>
-        </View>
-        <View className="mx-4 mt-2">
-          <TouchableOpacity className="bg-emerald-600 rounded-full py-4 items-center justify-center">
-            <Text className="font-sans-bold text-white text-sm tracking-widest">
-              LOG FOOD
-            </Text>
-          </TouchableOpacity>
-        </View>
+
+            <SectionTabs
+              tabs={tabs}
+              activeTab={activeTab}
+              onSelect={setActiveTab}
+            />
+
+            <View className="mx-4 mt-5">
+              <Text className="font-sans-bold text-slate-950 text-base mb-3">
+                MEALS
+              </Text>
+
+              {meals.map((meal) => (
+                <MealCard
+                  key={meal.id}
+                  title={meal.title}
+                  subtitle={meal.subtitle}
+                  kcal={meal.kcal}
+                />
+              ))}
+
+              <TouchableOpacity className="bg-white rounded-2xl py-5 mb-2.5 items-center justify-center shadow-sm shadow-slate-200">
+                <View className="w-11 h-11 rounded-full bg-emerald-600 items-center justify-center mb-2">
+                  <Feather name="plus" size={22} color="#ffffff" />
+                </View>
+                <Text className="font-sans-semibold text-slate-700 text-sm">
+                  Add Meal
+                </Text>
+              </TouchableOpacity>
+            </View>
+
+            <View className="mx-4 mt-2">
+              <TouchableOpacity className="bg-emerald-600 rounded-full py-4 items-center justify-center">
+                <Text className="font-sans-bold text-white text-sm tracking-widest">
+                  LOG FOOD
+                </Text>
+              </TouchableOpacity>
+            </View>
+          </>
+        )}
+
+        {activeTab !== "Today" && (
+          <>
+            <SectionTabs
+              tabs={tabs}
+              activeTab={activeTab}
+              onSelect={setActiveTab}
+            />
+
+            <View className="flex-1 items-center justify-center mt-24">
+              <Feather name="clock" size={40} color="#94a3b8" />
+              <Text className="font-sans-bold text-slate-400 text-base mt-4">
+                {activeTab} coming soon
+              </Text>
+            </View>
+          </>
+        )}
 
       </ScrollView>
     </SafeAreaView>

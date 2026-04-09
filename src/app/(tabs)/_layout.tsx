@@ -11,9 +11,6 @@ const TabsLayout = () => {
       }}
     >
       <Tabs.Screen name="index" />
-      <Tabs.Screen name="history" />
-      <Tabs.Screen name="foods" />
-      <Tabs.Screen name="settings" />
     </Tabs>
   );
 };

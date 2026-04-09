@@ -1,12 +1,12 @@
 import { Text, TouchableOpacity, View } from "react-native";
 
-type SectionTabsProps = {
-  tabs: readonly string[];
-  activeTab: string;
-  onSelect: (tab: string) => void;
+type SectionTabsProps<T extends string> = {
+  tabs: readonly T[];
+  activeTab: T;
+  onSelect: (tab: T) => void;
 };
 
-export function SectionTabs({ tabs, activeTab, onSelect }: SectionTabsProps) {
+export function SectionTabs<T extends string>({ tabs, activeTab, onSelect }: SectionTabsProps<T>) {
   return (
     <View className="flex-row border-b border-slate-200 bg-white pt-2">
       {tabs.map((tab) => {

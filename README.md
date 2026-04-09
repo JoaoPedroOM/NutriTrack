@@ -1,50 +1,64 @@
-# Welcome to your Expo app 👋
+<div align="center">
+  <img src="./assets/images/Logo.png" width="200" height="200" alt="NutriTrack Logo" />
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+  # 🥗 NutriTrack
 
-## Get started
+  ### Your journey to a healthier life, simplified.
 
-1. Install dependencies
+  [![React Native](https://img.shields.io/badge/React_Native-0.81.5-61DAFB?logo=react&logoColor=white)](https://reactnative.dev/)
+  [![Expo](https://img.shields.io/badge/Expo-54-000020?logo=expo&logoColor=white)](https://expo.dev/)
+  [![NativeWind](https://img.shields.io/badge/NativeWind-5.0-38B2AC?logo=tailwindcss&logoColor=white)](https://www.nativewind.dev/)
+  [![TypeScript](https://img.shields.io/badge/TypeScript-5.9-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+  [![CodeRabbit](https://img.shields.io/badge/AI_Powered-CodeRabbit-EB5424?logo=coderabbit&logoColor=white)](https://coderabbit.ai/)
 
-   ```bash
-   npm install
-   ```
+  ---
 
-2. Start the app
+  This screen was developed for a **technical test**.
 
-   ```bash
-   npx expo start
-   ```
+  **NutriTrack** is a modern mobile application focused on nutritional management and health monitoring.
 
-In the output, you'll find options to open the app in a
+</div>
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## 🛠️ Technologies Used
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+This project utilizes the latest technologies in the mobile ecosystem:
 
-## Get a fresh project
+*   **[React Native](https://reactnative.dev/)**: The foundation of the project for native performance.
+*   **[Expo](https://expo.dev/)**: A robust framework for simplified development and deployment.
+*   **[NativeWind](https://www.nativewind.dev/)**: Tailwind CSS implementation for React Native, enabling fast and responsive styling.
+*   **[React 19](https://react.dev/)**: Leveraging the latest library features for state management and performance.
+*   **[TypeScript](https://www.typescriptlang.org/)**: Static typing for a safer and more maintainable codebase.
 
-When you're ready, run:
+## 🤖 AI-Assisted Development
 
-```bash
-npm run reset-project
-```
+This project integrates **[CodeRabbit](https://coderabbit.ai/)** into its CI/CD workflow.
+CodeRabbit acts as an intelligent code reviewer, providing feedback and suggesting improvements in Pull Requests, ensuring code quality and architectural standards are maintained at every stage of development.
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## 🚀 How to Get Started
 
-## Learn more
+### Prerequisites
+- Node.js installed
+- Expo Go app installed on your smartphone or a configured emulator
 
-To learn more about developing your project with Expo, look at the following resources:
+### Installation
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+1.  Clone the repository:
+    ```bash
+    git clone https://github.com/JoaoPedroOM/NutriTrack.git
+    ```
+2.  Install the dependencies:
+    ```bash
+    npm install
+    ```
+3.  Start the development server:
+    ```bash
+    npx expo start
+    ```
 
-## Join the community
+Scan the generated QR Code with the **Expo Go** app (Android/iOS) to see the app in action!
 
-Join our community of developers creating universal apps.
+---
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+<div align="center">
+  Developed with ❤️ by <b>João Pedro</b>
+</div>
